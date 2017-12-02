@@ -1,5 +1,5 @@
 """
-  Deep Learning for Janken Game
+  Deep Learning for Janken Game using MLP
   2017.12  Takata
 """
 
