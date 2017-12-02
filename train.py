@@ -27,7 +27,7 @@ def train_and_test( training_data, test_data ):
     print( "Error: input number does not agree with output number (test data)" )
     return
 
-  # create input node
+  # create input layer
   with tf.name_scope( 'Inputs' ):
     input = tf.placeholder( tf.float32, shape=[None, 3], name='Input' )
   with tf.name_scope( 'Outputs' ):
