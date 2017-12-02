@@ -44,3 +44,15 @@ class Janken:
       training_data_output.append( self.winning_hand( *input_probs ) )
     return {'input': training_data_input, 'output': training_data_output}
 
+FLAGS = tf.app.flags.FLAGS
+tf.app.flags.DEFINE_integer( 'test_data', 10, 'number of test data')
+tf.app.flags.DEFINE_integer( 'training_data', 1000, 'number of training data')
+
+def main( argv=None ):
+  janken = Janken()
+  training_data = janken.get_training_data( FLAGS.training_data )
+  test_data = janken.get_training_data( FLAGS.test_data )
+
+if __name__ == '__main__':
+  tf.app.run()
+
